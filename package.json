@@ -1,0 +1,13 @@
+{
+  "name": "nawins-restaurant",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "setup-db": "npm run setup-db --prefix server",
+    "create-owner": "npm run create-owner --prefix server",
+    "dev": "concurrently -n API,WEB -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
